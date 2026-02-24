@@ -1,0 +1,123 @@
+{
+    "101": {
+        "code": "201",
+        "key": "LEAD_INSERT",
+        "message": "Su información se guardó correctamente. ",
+        "Category": "",
+        "type": "success",
+        "title": "Success!"
+    },
+    "102": {
+        "code": "500",
+        "key": "ERROR_DATABASE",
+        "message": "Algo salió mal. Inténtalo más tarde.",
+        "Category": "",
+        "type": "error",
+        "title": "Error"
+    },
+     "103": {
+        "code": "400",
+        "key": "REQUIRED_NAME",
+        "message": "El titular de la tarjeta no debe estar vacío",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "104": {
+        "code": "400",
+        "key": "CARD_OWNER_FORMAT_INVALID",
+        "message": "El titular de la tarjeta debe contener letras",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "105": {
+        "code": "400",
+        "key": "REQUIRED_CARD_NUMBER",
+        "message": "El número de tarjeta es un campo obligatorio",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "106": {
+        "code": "400",
+        "key": "CARD_NFORMAT_INVALID",
+        "message": "el número de tarjeta no es válido",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "107": {
+        "code": "400",
+        "key": "REQUIRED_EXPIRATION",
+        "message": "La fecha de vencimiento es un campo obligatorio.",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+     "108": {
+        "code": "400",
+        "key": "EXPIRATION_INVALID",
+        "message": "Fecha de vencimiento no válida: formato incorrecto o fecha de vencimiento",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+     "109": {
+        "code": "400",
+        "key": "EMAIL_FORMAT_INVALID",
+        "message": "Formato de correo electrónico no válido",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+     "110": {
+        "code": "400",
+        "key": "COMPANY_FORMAT_INVALID",
+        "message": "La empresa debe contener letras",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+     "111": {
+        "code": "401",
+        "key": "ERROR_CAPTCHA",
+        "message": "Error al comprobar el captcha. Inténtalo de nuevo",
+        "Category": "AUTH",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "112": {
+        "code": "401",
+        "key": "ERROR_MAIL",
+        "message": "No hay ningún correo electrónico asociado con el envío del formulario",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "113": {
+        "code": "201",
+        "key": "LEAD_EMAIL_SEND",
+        "message": "Correo electrónico enviado correctamente",
+        "Category": "",
+        "type": "success",
+        "title": "Success!"
+    },
+    "114": {
+        "code": "201",
+        "key": "MISSING_FIELDS",
+        "message": "Por favor, rellene todos los campos obligatorios",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    }, 
+    "115": {
+        "code": "400",
+        "key": "AMOUNT_FORMAT_INVALID",
+        "message": "El formato del monto no es válido",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    }
+
+}

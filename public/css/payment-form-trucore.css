@@ -1,0 +1,254 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+/* 
+    GLOBAL STYLES
+*/
+
+:root {
+  /* Paleta de colores */
+  --color-primary: #137DC5;
+  --color-primary-hover: #095a91;
+  --color-accent: #f5793b;
+  --color-accent-strong: #f5633b;
+  --color-surface: #ffffff;
+  --color-surface-muted: #B8B8B824;
+  --color-text: #565454;
+  --color-text-placeholder: #8c8888;
+  --color-text-muted: #656565;
+  --color-border: #c2cad6;
+  /* Messages colors and background */
+  --color-message-notice: #137DC5;
+  --color-message-succes: #3CDD5F;
+  --color-message-warning: #F5793B;
+  --color-message-error: #F02A2A;
+  --color-background-notice: rgba(19, 125, 197, 0.08);
+  --color-background-succes: rgba(60, 221, 95, 0.08);
+  --color-background-warning: rgba(245, 121, 59, 0.08);
+  --color-background-error: rgba(245, 66, 66, 0.08);
+
+  /* Tipography and Scale */
+  --font-family-base: "Afacad", sans-serif;
+  --font-family-heading: "Montserrat", "Inter", sans-serif;
+  --font-family-messages: "Inter", sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --line-height-base: 1;
+
+  /* Espaciado y bordes */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+body{background: #f5f5f5}.rounded{border-radius: 1rem}.nav-pills .nav-link{color: #555}.nav-pills .nav-link.active{color: white}input[type="radio"]{margin-right: 5px}.bold{font-weight:bold}
+
+.invalid-feedback {
+  display: block !important;
+}
+/* MESSAGES STYLES */
+#qp-embedded-container{
+  margin-top: 50px;
+  width: 70%;
+}
+
+.required::after{
+  content: " *";
+  color: red;
+}
+
+.message-paragraph {
+  text-align: left;
+}
+
+.message_rectangle{
+    border-radius: 12.86px 0px 0px 12.86px;
+    height: 100%;
+    width: 15px;
+    float: left;
+}
+
+.notice{
+   background-color: var(--color-background-notice);
+}
+
+.success{
+  background-color: var(--color-background-succes)
+}
+
+.error{
+  background-color: var(--color-background-error);
+}
+
+.warning{
+  background-color: var(--color-background-warning);
+}
+
+.notice_color{
+    color: var(--color-message-notice) !important;
+}
+
+.success_color{
+    color: var(--color-message-succes) !important;
+}
+
+.warning_color{
+    color: var(--color-message-warning) !important;
+}
+
+.error_color{
+    color: var(--color-message-error);
+}
+
+#formResponse,
+#formResponseEmail{
+  width: 422px;
+}
+
+.message_icon{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 23px;
+    float: left;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    width: 21px;             
+    height: 21px;    
+    font-size: 20px;       
+    border-radius: 100%;
+    text-align: center; 
+}
+
+.ResponseMessage{
+    margin-top: 10px;
+    width: 100%;
+    height: 70px;
+    overflow: auto;
+    border-radius: 12.86px;
+}
+
+.message-paragrah{
+    text-align: left;
+}
+
+.text-message{
+    position: relative;
+    display: block;
+    text-align: left;
+    padding: 0px 30px 0px 5px;
+    color: #757474;
+    font-family: var(--font-family-messages);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    margin-top: 10px;
+    margin-left: -1px;
+    max-width: 400px;
+}
+
+.bold-message{
+    position: relative;
+    top: 10px;
+    color: #484848;
+    font-family: var(--font-family-messages);
+    line-height: 11.85px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+
+#trf-payment-form button[type="submit"]{
+  color: white;
+}
+
+.contact-form #phone-and-type-section{
+  gap: 0px;
+}
+
+.exit-message{
+    font-family: sans-serif;
+    position: relative;
+    float: right;
+    color: rgba(117, 116, 116, 0.74) !important;
+    top: 17px;
+    left: -20px;
+    border: none;
+    background: none !important;
+    font-weight: 400;
+    font-size: 20px;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.exit-message:hover{
+    font-size: 22px;
+    border: none;
+    color:  rgba(117, 116, 116, 1.00);
+    background: none;
+}
+
+
+.submit-btn:disabled,
+.submit-btn[disabled]{
+      filter: grayscale(1);
+      cursor: default;
+}
+
+.empty{
+  border: 1px solid red !important;
+}
+
+.invalid-feedback{
+  display: block;
+}
+
+.btn-primary:activate, .btn-primary:focus{
+  background-color: #007bff;
+}
+
+#submit-btn:focus{
+  background-color: #007bff;
+}
+
+.mx-1:hover{
+  font-size: 35px;
+  transition: .3s;
+}
+
+label{
+  color: #137DC5;
+}
+
+.card-header .nav-item:hover{
+    opacity: 0.9;
+}
+
+.card-header a{
+  text-decoration: none;
+}
+
+.card{
+  background: white;
+}
+
+.card-footer{
+  background: white;
+  border-top: none;
+}
+
+.form-control {
+  border: 1px solid #ced4da !important;
+}

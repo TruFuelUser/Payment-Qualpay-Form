@@ -1,0 +1,123 @@
+{
+    "101": {
+        "code": "201",
+        "key": "LEAD_INSERT",
+        "message": "Your information was saved succesfully. ",
+        "Category": "",
+        "type": "success",
+        "title": "Success!"
+    },
+    "102": {
+        "code": "500",
+        "key": "ERROR_DATABASE",
+        "message": "Something went wrong. Please try later.",
+        "Category": "",
+        "type": "error",
+        "title": "Error"
+    },
+     "103": {
+        "code": "400",
+        "key": "REQUIRED_NAME",
+        "message": "The card owner must not be empty.",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "104": {
+        "code": "400",
+        "key": "CARD_OWNER_FORMAT_INVALID",
+        "message": "The card owner must contain letters",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "105": {
+        "code": "400",
+        "key": "REQUIRED_CARD_NUMBER",
+        "message": "Card Number is a required field",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "106": {
+        "code": "400",
+        "key": "CARD_NFORMAT_INVALID",
+        "message": "card Number is invalid",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "107": {
+        "code": "400",
+        "key": "REQUIRED_EXPIRATION",
+        "message": "Expiration Date is a required field.",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+     "108": {
+        "code": "400",
+        "key": "EXPIRATION_INVALID",
+        "message": "Invalid Expiration Date: incorrect format or expired date",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+     "109": {
+        "code": "400",
+        "key": "EMAIL_FORMAT_INVALID",
+        "message": "Invalid Email Format",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+     "110": {
+        "code": "400",
+        "key": "COMPANY_FORMAT_INVALID",
+        "message": "Company must contain letters",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+     "111": {
+        "code": "401",
+        "key": "ERROR_CAPTCHA",
+        "message": "Error checking captcha. Please try again",
+        "Category": "AUTH",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "112": {
+        "code": "401",
+        "key": "ERROR_MAIL",
+        "message": "There is no email associated with the form submission.",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    },
+    "113": {
+        "code": "201",
+        "key": "LEAD_EMAIL_SEND",
+        "message": "Email sent successfully.",
+        "Category": "",
+        "type": "success",
+        "title": "Success!"
+    },
+    "114": {
+        "code": "201",
+        "key": "MISSING_FIELDS",
+        "message": "Please fill all Required Fields.",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    }, 
+    "115": {
+        "code": "400",
+        "key": "AMOUNT_FORMAT_INVALID",
+        "message": "Amount Format is Invalid",
+        "Category": "",
+        "type": "warning",
+        "title": "Warning!"
+    }
+
+}
