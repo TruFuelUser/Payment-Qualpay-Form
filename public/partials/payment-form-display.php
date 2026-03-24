@@ -28,6 +28,11 @@
     <!-- Librerias de javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <!-- Input Mask library -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script> -->
+
+
     
     <!-- GOOGLE FONTS LIBRARY -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -233,4 +238,3 @@
     <div id="email-message" class="col-lg-10 mx-auto" align="center"></div>
 </body>
 </html>
-

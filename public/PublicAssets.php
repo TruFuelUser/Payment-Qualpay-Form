@@ -53,6 +53,32 @@ class Payment_Form_Trucore_Public {
             true
         );
 
+        wp_enqueue_script(
+            "{$this->plugin_name}-maskito-amount",
+            plugin_dir_url( __FILE__ ) . 'js/maskito-amount.js',
+            [],
+            $this->version,
+            true
+        );
+        $module_handle = "{$this->plugin_name}-maskito-amount";
+        wp_scripts()->add_data( $module_handle, 'type', 'module' );
+
+        add_filter(
+            'script_loader_tag',
+            static function( $tag, $handle, $src ) use ( $module_handle ) {
+                if ( $handle !== $module_handle ) {
+                    return $tag;
+                }
+
+                return sprintf(
+                    '<script type="module" src="%s"></script>',
+                    esc_url( $src )
+                );
+            },
+            10,
+            3
+        );
+
         $site_key = get_option( 'trf_recaptcha_site_key', '' ); // Captcha Site Key (public)
 
         wp_localize_script(

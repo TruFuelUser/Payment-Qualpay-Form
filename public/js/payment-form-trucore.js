@@ -574,6 +574,23 @@ $(document).on('click', '.exit-message', function(event){
 $(document).ready(function() {
 	// 3) Execute Captcha
 	checkCaptcha();
+
+	// new Cleave('#amount', {
+	// 	numeral: true,
+	// 	numeralPositiveOnly: true
+	// });
+
+	// const amountInput = document.getElementById('amount');
+	// if (amountInput) {
+	// 	const amountCleave = new Cleave('#amount', {
+	// 		numeral: true,
+	// 		numeralDecimalMark: '.',
+	// 		numeralDecimalScale: 2,
+	// 		numeralThousandsGroupStyle: 'thousand',
+	// 		delimiter: ',',
+	// 		numeralPositiveOnly: true,
+	// 	});
+	// }
 });
 
 // Event Listener individually for each input
@@ -625,17 +642,16 @@ $(document).on('click', '#submit-btn-payment', async function(event) {
 	}
 });
 
-$(document).on('input', '#monthCard', function(){
+$(document).on('input', '#monthCard', function() {
 	var month = document.getElementById('monthCard');
 	var year =  document.getElementById('yearCard');
 	moveCursor(month,year,2);
 });
 
-$(document).on('input', '#yearCard', function(){
+$(document).on('input', '#yearCard', function() {
 	var year = document.getElementById('yearCard');
 	var cvv =  document.getElementById('CVV');
 	moveCursor(year, cvv,2);
 });
 
 })( jQuery );
-
