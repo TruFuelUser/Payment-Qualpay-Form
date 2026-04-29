@@ -23,6 +23,7 @@ require_once TRF_PAYMENT_PATH . 'includes/Services/DisplayErrors.php';
 require_once TRF_PAYMENT_PATH . 'includes/Services/CheckCaptcha.php';
 require_once TRF_PAYMENT_PATH . 'includes/Services/PaymentValidator.php';
 require_once TRF_PAYMENT_PATH . 'includes/Services/Payment.php';
+require_once TRF_PAYMENT_PATH . 'includes/Services/Capture.php';
 require_once TRF_PAYMENT_PATH . 'includes/Services/SendConfirmByEmail.php';
 
 
@@ -76,19 +77,55 @@ function trufuelAjaxPayment() {
         ];
 
         $transactionID = $response['transactionID'];
+        trufuelAjaxCapture($data['amt'], $transactionID);
 
-        $displayMessage = new PaymentErrors(0); //message code isn't use
-        $html = $displayMessage->generateMessage($message); 
-        wp_send_json_success(['html' =>  $html, 'transactionID' => $transactionID]);
+        // $displayMessage = new PaymentErrors(0); //message code isn't use
+        // $html = $displayMessage->generateMessage($message); 
+        // wp_send_json_success(['html' =>  $html, 'transactionID' => $transactionID]);
         return;
-    }catch (Exeption $e) { 
+    } catch (Exeption $e) { 
         $message = new PaymentErrors(102);
         $html = $message->displayError();
         wp_send_json_error(['html' => $html]);
         return;
     }
+
 }
 
+/**
+ * If Payment be ok then make a capture
+ */
+function trufuelAjaxCapture($amt, $transactionID) {
+    
+    $capture = new Capture();
+
+    try {
+        $captureTransaction = $capture->capture([
+            'amt' => $amt,
+            'pgId' => $transactionID
+        ]);
+
+        $message = [
+            'type' => 'success',
+            'title' => 'Success!',
+            'message' => $captureTransaction['message']
+        ];
+
+        $displayMessage = new PaymentErrors(0); //message code isn't use
+        $html = $displayMessage->generateMessage($message); 
+        wp_send_json_success(['html' =>  $html, 'transactionID' => $transactionID]);
+
+    } catch (Exeption $e) {
+        $message = new PaymentErrors(102);
+        $html = $message->displayError();
+        wp_send_json_success(['html' => $html]);
+        return;
+    }
+}
+
+/**
+ * Send Email functionality
+ */
 function trufuelAjaxSendEmail() {
     $fields  =  $_POST['form_fields'] ?? [];
     // change This for sent to multiple mail accounts
@@ -128,6 +165,10 @@ function showPaymentForm() {
 // ========== MAKE PAYMENT =========================
 add_action( 'wp_ajax_trufuel_payment', 'trufuelAjaxPayment' );
 add_action( 'wp_ajax_nopriv_trufuel_payment', 'trufuelAjaxPayment' );
+
+// ========== MAKE CAPTURE =========================
+add_action( 'wp_ajax_trufuel_capture', 'trufuelAjaxCapture' );
+add_action( 'wp_ajax_nopriv_trufuel_capture', 'trufuelAjaxCapture' );
 
 // ========== SEND CONFIRM BY EMAIL =========================
 add_action( 'wp_ajax_trufuel_send_email', 'trufuelAjaxSendEmail' );
